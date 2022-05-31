@@ -1,0 +1,55 @@
+.project-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background: rgba(73, 94, 107, 0.3);
+    margin-top: 40px;
+    width: 100%;
+}
+
+.project-buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 150px;
+}
+
+.project-container > * {
+    margin: 15px;
+}
+
+.project-image {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+}
+
+.project-description {
+    font-size: 18px;
+    margin: 0 20px;
+    color: lightgray;
+    text-align: center;
+}
+
+.project-title {
+    font-family: "Impact", serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #de9538;
+}
+
+@media only screen and (min-width: 1024px) {
+    .project-container {
+        width: 500px;
+
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .project-container {
+        height: 400px;
+    }
+}

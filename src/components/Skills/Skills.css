@@ -1,0 +1,50 @@
+.category-container {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 50px;
+
+}
+
+.skills-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.category-name {
+    color: #ffa83e;
+    /*color: #1b2760;*/
+
+    font-size: 40px;
+    margin: 5px;
+    font-family: "Impact", serif;
+}
+
+.icon-container {
+    display: flex;
+}
+
+.icon {
+    width: 60px;
+    transition: 0.5s;
+    z-index: 2;
+    padding: 5px;
+}
+
+.icon:hover {
+   transform: scale(1.3);
+}
+
+#wave{
+    position: absolute;
+    top:0;
+
+}
+
+
+
+

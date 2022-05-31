@@ -1,0 +1,66 @@
+pre {
+    margin: 0;
+}
+
+.hello-world {
+    display: inline-block;
+    color: white;
+    width: 260px;
+    /*height: 150px;*/
+
+}
+
+.greeting-lines {
+    font-size: 27px;
+    width: 300px;
+
+}
+
+.greeting-lines-small {
+    font-size: 18px;
+}
+
+
+/*@media only screen and (min-width: 1024px) {*/
+/*    .hello-world {*/
+/*        width: 100%;*/
+/*    }*/
+
+/*    .hello-world > * {*/
+/*        display: inline-block;*/
+/*    }*/
+
+/*    .greeting-lines {*/
+/*        font-size: 50px;*/
+/*        width: auto;*/
+/*    }*/
+
+/*    .greeting-lines-small {*/
+/*        display: none;*/
+/*    }*/
+/*}*/
+
+
+/*@media only screen and (min-width: 325px) and (orientation: landscape) {*/
+/*    .hello-world {*/
+/*        margin-top: 40px;*/
+/*        flex-direction: row;*/
+/*    }*/
+
+/*}*/
+
+/*@media only screen and (min-width: 730px) {*/
+/*    .hello-world {*/
+/*        align-items: center;*/
+/*        font-size: 27px;*/
+/*        flex-direction: row;*/
+/*    }*/
+/*}*/
+
+
+/*@media only screen and (min-width: 1024px) {*/
+/*    .hello-world {*/
+/*        font-size: 47px;*/
+/*        right: 400px;*/
+/*    }*/
+/*}*/

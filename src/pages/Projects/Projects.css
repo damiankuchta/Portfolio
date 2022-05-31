@@ -1,0 +1,19 @@
+#projects-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media only screen and (min-width: 1024px) {
+    #projects-container {
+        flex-direction: unset;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #projects-container > * {
+
+        width: 30%;
+    }
+}

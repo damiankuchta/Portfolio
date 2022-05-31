@@ -1,0 +1,130 @@
+#home-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: lightgray;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    width: 100%;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.skills {
+    width: 100%;
+}
+
+#skills-big {
+    display: none;
+}
+
+#about-me-text {
+    color: lightgray;
+    font-size: 20px;
+    width: 100%;
+    /*height: 100%;*/
+}
+
+#profile-picture {
+    width: 95%;
+    border: white 3px solid;
+    border-radius: 100%;
+    filter: grayscale(100%) brightness(75%);
+    transform: rotate(10deg);
+    margin-bottom: 30px;
+    max-width: 300px;
+
+}
+
+.skills-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+
+    background-color: rgba(73, 94, 107, 0.3);
+    border-radius: 5px;
+    width: 100%;
+
+}
+
+.download-button {
+
+    margin: 20px;
+}
+
+#big-screen-greeting {
+    display: none;
+}
+
+
+@media only screen and (min-width: 768px) {
+    #home-container {
+        display: grid;
+        grid-template-columns: [first] 45% [second] auto;
+
+    }
+
+    #profile-picture {
+        width: 90%;
+        max-width: 400px;
+    }
+
+
+    .skills-container {
+        grid-column: 1 / 3;
+
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #home-container {
+        padding: 0;
+        grid-template-columns: [first] 45% [second] 55%;
+    }
+
+    #profile-picture {
+        position: relative;
+        top: -60px;
+    }
+
+
+    #skills-big {
+        display: block;
+    }
+
+    #skills-small {
+        display: none;
+    }
+
+    .skills {
+        display: flex;
+        justify-content: center;
+    }
+
+    #big-screen-greeting {
+        display: block;
+        height: 80px;
+
+        color: white;
+        font-weight: bold;
+    }
+
+    #big-screen-greeting > .greeting-lines {
+
+        font-size: 40px;
+    }
+
+    #big-screen-greeting > .greeting-lines-small {
+
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    #profile-picture {
+        max-width: 1000000px;
+        top: 0;
+    }
+}

@@ -1,0 +1,18 @@
+.nav-button {
+    background-color: #4e4b4b;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 0;
+}
+
+.nav-button-line {
+    background-color: black;
+    width: 80%;
+    height: 6px;
+    margin: 3px 0;
+}
