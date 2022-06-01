@@ -6,6 +6,7 @@
     background: rgba(73, 94, 107, 0.3);
     margin-top: 40px;
     width: 100%;
+   font-family: var(--main-font)
 }
 
 .project-buttons {

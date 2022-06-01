@@ -25,9 +25,9 @@ export default function Project({title, description, buttons, icon}) {
 
 function ProjectButton({name, config}) {
     if (config.isDisabled) {
-            return <span className={'button disabled-button'}>name</span>
+            return <span className={'button disabled-button'}>{name}</span>
         }
-        return <a className={'button'} href={config.link}>Github</a>
+        return <a className={'button'} href={config.link}>{name}</a>
 }
 
 

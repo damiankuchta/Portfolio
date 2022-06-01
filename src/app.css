@@ -1,3 +1,7 @@
+:root {
+    --main-font: 'Roboto Mono', monospace
+}
+
 html, body {
     margin: 0;
     padding: 0;
