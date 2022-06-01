@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react"
 
-function getDocumentDimensions() {
+function gerMainContainerDimensions() {
     const {clientHeight: height, clientWidth: width} = document.getElementById('main-container')
     return {height, width}
 }
@@ -12,7 +12,7 @@ export default function useDocumentDimensions() {
 
 
         function handleResize() {
-            setDocumentDimensions(getDocumentDimensions())
+            setDocumentDimensions(gerMainContainerDimensions())
         }
 
         window.addEventListener('resize', handleResize);

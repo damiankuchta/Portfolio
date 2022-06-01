@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useCallback, useState} from "react";
 import Typewriter from "../Typewriter/TypeWriter";
 import "./GreetingLines.css"
 
@@ -6,15 +6,15 @@ function GreetingText({setGreetingFinished, id}) {
 
     let [useIsTitleDone, setIsTitleDone] = useState(false)
 
-    const handleTitleCallBack = () => {
-        setIsTitleDone(() => {
-            return true
-        })
-    }
+    let handleTitleCallBack = useCallback(() => {
+        setIsTitleDone(true)
+    },[setIsTitleDone])
 
-    const handleGreetingFinished = () => {
+    let handleGreetingFinished = useCallback(() => {
         setGreetingFinished(true)
-    }
+    },[setGreetingFinished])
+
+
 
     return (
         <div className={'hello-world'} id={id}>

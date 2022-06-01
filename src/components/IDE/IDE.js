@@ -15,7 +15,7 @@ function IDE({iseGreetingFinished}) {
     let [lineComponents, setLineComponents] = useState([])
     let [maxLinesCount, setMaxLinesCount] = useState(200)
 
-    const {height, width} = useDocumentDimensions()
+    const {height} = useDocumentDimensions()
 
     //make sures that IDE is always following code at the bottom
     useEffect(() => {

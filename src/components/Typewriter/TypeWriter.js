@@ -36,7 +36,11 @@ export default function Typewriter({children, className, newLineCallBack, callBa
         return (() => {
             return clearInterval(blinkerInterval)
         })
-    }, [useConf.useBlinker])
+    }, [useConf.useBlinker, useConf.blinkerTime])
+
+    useEffect(() => {
+       console.log(callBack.toString())
+    },[callBack])
 
     useEffect(() => {
         let timeOut
@@ -129,7 +133,7 @@ export default function Typewriter({children, className, newLineCallBack, callBa
             return clearInterval(timeOut)
         })
 
-    }, [children, newLineCallBack,useConf.autoFill, useConf.hideBlinkerOnFinish, useConf.repeat, useConf.skipTabs, useConf.speed])
+    }, [children, callBack, newLineCallBack,useConf.autoFill, useConf.hideBlinkerOnFinish, useConf.repeat, useConf.skipTabs, useConf.speed])
 
     return (
         <pre className={className} >

@@ -1,13 +1,14 @@
-import React, {useState} from "react"
+import React, {useMemo} from "react"
 
 import "./Project.css"
 
+
 export default function Project({title, description, buttons, icon}) {
-    //
-    let [useButtons, setButtons] = useState({
+
+    const buttonsConfig = {
         github: {isDisabled: false, link: "", ...buttons.github},
         demo: {isDisabled: false, link: "", ...buttons.demo},
-    })
+    }
 
     return (
 
@@ -15,8 +16,8 @@ export default function Project({title, description, buttons, icon}) {
             <span className={'project-title'}>{title} {icon}</span>
             <span className={'project-description'}>{description}</span>
             <div className={'project-buttons'}>
-                <ProjectButton name={'Github'} config={useButtons.github}/>
-                <ProjectButton name={'Demo'} config={useButtons.demo}/>
+                <ProjectButton name={'Github'} config={buttonsConfig.github}/>
+                <ProjectButton name={'Demo'} config={buttonsConfig.demo}/>
             </div>
         </div>
 
