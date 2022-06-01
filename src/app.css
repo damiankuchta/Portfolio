@@ -12,40 +12,7 @@ body {
 }
 
 
-.button {
-    text-decoration: none;
-    color: lightgray;
-    background-color: #1e295a;
-    width: 80%;
-    height: 50px;
-    border: none;
-    box-shadow: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition-duration: 0.5s;
-    font-size: 17px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.button:hover {
-    transform: scale(1.05);
-}
-
-.disabled-button {
-    background-color: #353d58;
-
-    color: currentColor;
-    cursor: not-allowed;
-    opacity: 0.5;
-
-}
-
-.disabled-button:hover {
-    transform: scale(1);
-}
 
 #main-container {
     padding: 40px;

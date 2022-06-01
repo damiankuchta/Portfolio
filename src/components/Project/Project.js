@@ -1,6 +1,7 @@
-import React, {useMemo} from "react"
+import React from "react"
 
 import "./Project.css"
+import Button from "../Button/Button";
 
 
 export default function Project({title, description, buttons, icon}) {
@@ -16,19 +17,13 @@ export default function Project({title, description, buttons, icon}) {
             <span className={'project-title'}>{title} {icon}</span>
             <span className={'project-description'}>{description}</span>
             <div className={'project-buttons'}>
-                <ProjectButton name={'Github'} config={buttonsConfig.github}/>
-                <ProjectButton name={'Demo'} config={buttonsConfig.demo}/>
+                <Button isDisabled={buttonsConfig.github.isDisabled} link={buttonsConfig.github.link}>Github</Button>
+                <Button isDisabled={buttonsConfig.demo.isDisabled} link={buttonsConfig.demo.link}>Demo</Button>
             </div>
         </div>
 
     )
 }
 
-function ProjectButton({name, config}) {
-    if (config.isDisabled) {
-            return <span className={'button disabled-button'}>{name}</span>
-        }
-        return <a className={'button'} href={config.link}>{name}</a>
-}
 
 
