@@ -1,7 +1,7 @@
 import React from "react"
-import './Button.css'
+import './Link.css'
 
-export default function Button({children, link, isDisabled = false}) {
+export default function Link({children, link, isDisabled = false}) {
 
     return (
         isDisabled ? <span className={'button disabled-button'}>{children}</span> :

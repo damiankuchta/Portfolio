@@ -2,7 +2,8 @@ import Skills from "../Skills/Skills";
 import {backendIcons, frontendIcons} from "../../pages/Home/skillList";
 import CV from "../../static/DamianCV.pdf";
 import Cover from "../../static/Damian Kuchta Cover letter.pdf";
-import Button from "../Button/Button";
+
+import Link from "../Link/Link";
 
 export default function SkillsContainer({id}) {
 
@@ -15,9 +16,9 @@ export default function SkillsContainer({id}) {
             </div>
             <div className={'skills-buttons'}>
 
-                <Button link={CV}>CV</Button>
-                <Button link={Cover}>Cover Letter
-                </Button>
+                <Link link={CV}>CV</Link>
+                <Link link={Cover}>Cover Letter
+                </Link>
             </div>
         </div>
 

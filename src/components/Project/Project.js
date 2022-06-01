@@ -1,7 +1,7 @@
 import React from "react"
 
 import "./Project.css"
-import Button from "../Button/Button";
+import Link from "../Link/Link";
 
 
 export default function Project({title, description, buttons, icon}) {
@@ -17,8 +17,8 @@ export default function Project({title, description, buttons, icon}) {
             <span className={'project-title'}>{title} {icon}</span>
             <span className={'project-description'}>{description}</span>
             <div className={'project-buttons'}>
-                <Button isDisabled={buttonsConfig.github.isDisabled} link={buttonsConfig.github.link}>Github</Button>
-                <Button isDisabled={buttonsConfig.demo.isDisabled} link={buttonsConfig.demo.link}>Demo</Button>
+                <Link isDisabled={buttonsConfig.github.isDisabled} link={buttonsConfig.github.link}>Github</Link>
+                <Link isDisabled={buttonsConfig.demo.isDisabled} link={buttonsConfig.demo.link}>Demo</Link>
             </div>
         </div>
 
