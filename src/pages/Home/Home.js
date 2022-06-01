@@ -16,7 +16,7 @@ function Home() {
     return (
         <div id={'home-container'}>
 
-            <img src={profilePicture} alt={"profile picture"} id={'profile-picture'}/>
+            <img src={profilePicture} alt={"profile"} id={'profile-picture'}/>
             <div id={'about-me-text'}>
                 <GreetingText id={'big-screen-greeting'}/>
                 <div>{aboutMe}</div>

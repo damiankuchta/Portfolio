@@ -1,4 +1,4 @@
-import React, {Fragment, useEffect, useState} from "react"
+import React, {useEffect, useState} from "react"
 import "highlight.js/styles/stackoverflow-dark.css";
 
 
@@ -36,7 +36,7 @@ export default function Typewriter({children, className, newLineCallBack, callBa
         return (() => {
             return clearInterval(blinkerInterval)
         })
-    }, [])
+    }, [useConf.useBlinker])
 
     useEffect(() => {
         let timeOut
@@ -129,7 +129,7 @@ export default function Typewriter({children, className, newLineCallBack, callBa
             return clearInterval(timeOut)
         })
 
-    }, [children])
+    }, [children, newLineCallBack,useConf.autoFill, useConf.hideBlinkerOnFinish, useConf.repeat, useConf.skipTabs, useConf.speed])
 
     return (
         <pre className={className} >
