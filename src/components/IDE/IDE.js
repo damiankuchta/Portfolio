@@ -51,6 +51,8 @@ function IDE({iseGreetingFinished}) {
         }
     }, [maxLinesCount, displayLinesCount, isTooManyLines])
 
+
+
     const handleTypeWriterCallBack = () => {
         const needsRestart = lineToPrint >= codeToPrintSplitedByNewLines.length - 1
         if (needsRestart) {

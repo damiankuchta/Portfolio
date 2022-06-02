@@ -7,6 +7,7 @@ export default function Typewriter({children, className, newLineCallBack, callBa
     let [useCurrentText, setCurrentText] = useState("")
     let [useBlinker, setBlinker] = useState(true)
 
+
     let [useConf, setConf] = useState({
         skipTabs: true,
         autoFill: 99,
@@ -38,16 +39,16 @@ export default function Typewriter({children, className, newLineCallBack, callBa
         })
     }, [useConf.useBlinker, useConf.blinkerTime])
 
-    useEffect(() => {
-       console.log(callBack.toString())
-    },[callBack])
 
     useEffect(() => {
         let timeOut
         let characterIndex = 0
         let wordIndex = 0
 
-        let words = children.split(/(\s+)/).filter(char => char.length)
+        let words = ""
+        if(children) {
+            words = children.split(/(\s+)/).filter(char => char.length)
+        }
         let textToBeAdded = ""
 
 
@@ -130,10 +131,10 @@ export default function Typewriter({children, className, newLineCallBack, callBa
         timeOut = setTimeout(displayNext, useConf.speed)
 
         return (() => {
-            return clearInterval(timeOut)
+            clearTimeout(timeOut)
         })
 
-    }, [children, callBack, newLineCallBack,useConf.autoFill, useConf.hideBlinkerOnFinish, useConf.repeat, useConf.skipTabs, useConf.speed])
+    }, [children, useConf.autoFill, useConf.hideBlinkerOnFinish, useConf.repeat, useConf.skipTabs, useConf.speed])
 
     return (
         <pre className={className} >

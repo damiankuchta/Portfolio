@@ -11,7 +11,9 @@ function GreetingText({setGreetingFinished, id}) {
     },[setIsTitleDone])
 
     let handleGreetingFinished = useCallback(() => {
-        setGreetingFinished(true)
+        if(setGreetingFinished) {
+            setGreetingFinished(true)
+        }
     },[setGreetingFinished])
 
 
