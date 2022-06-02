@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Portfolio HTML/CSS/JS/REACT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My portfolio/project website
 
-## Available Scripts
+##HOW I HAVE CODED IT
+I have used mobile first approach to create this app, also tried to make code as self-explanatory as
+best I could, I have tried to separate the components, although I did not go to deep with it as 
+I believe it would be an overkill for such a small project
 
-In the project directory, you can run:
+##ISSUES
 
-### `npm start`
+Some issues that I have run into, and how I dealt with them
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### `Design/Idea`
+>Design/Idea was my biggest enemy while making this project, I just had a basic Idea how I want to make this website look, 
+> > trial and error
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `Performance`
 
-### `npm test`
+> I used 'react-highlight' library to make the code highlighted, and it worked fine, but the problem was that it was re-rendering whole code. rather just the part that was added, which caused a visible slowdown after 200+lines
+>
+>Also, for some reasons blur:3 was making website jittery on mobiles
+>> I have made divided the code into separate lines
+> > and made the highlighted component save into state
+>
+>> As for a blur, I have changed it to blur 4 and made the code bold, this fixed the issue
+>
+> > Made code shift() 1 line when reached maxLine level (which was calculated height of container
+> change)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `Size`
 
-### `npm run build`
+> I needed for IDE to be in the background, thus used position absolute, but because of it
+> I was unable to adjust the height to match the browser dimensions accordingly
+>> Created customHook which was taking the dimension of the main-container class, and used it
+> to adjust height of the component
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `UseDocumentDimensions`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> It a customHook made to get dimensions of the container, used to calculate maxLines for IDE and for
+> adjusting component, the issue was that when I made it I believe that for some reason it was taking
+> full dimensions of the container before everything was fully rendered
+> > I had to create event listeners inside to take the measurements after everything have been loaded
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
